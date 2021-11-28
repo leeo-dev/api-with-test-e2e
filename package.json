@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx mocha -w --parallel *.test.js",
-    "test:cov": "npx mocha -w --parallel *.test.js"
+    "test:cov": "npx nyc npx mocha --parallel *.test.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/leeodesign/api-with-test-e2e#readme",
   "devDependencies": {
     "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
     "supertest": "^6.1.6"
   }
 }
